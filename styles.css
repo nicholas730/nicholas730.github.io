@@ -1,13 +1,18 @@
 ﻿body{
-    /*background-color: lightblue;*/
     margin: 0 auto;
     width: 960px;
     font-family:sans-serif;
 }
-h3,p{
-    margin-left: 10px;
+h2{
+    margin:50px 0 0 0;
+    text-align:center;
+    vertical-align:middle;
+}
+h3{
+    text-align:center;
 }
 p{
+    margin: 10px;
     font-size:10pt;
 }
 .top{
@@ -22,11 +27,14 @@ p{
     margin-right:0%;
 }
 .table_data{
+    margin:1%;
+    padding-top:20px;
     overflow-x:auto;
     clear:both;
 }
 table{
-    height:90%;
+    table-layout:fixed;
+    width:500%;
     margin:5px;
     border-collapse: collapse;
 }
@@ -40,29 +48,25 @@ td{
     cursor:cell;
 }
 #top-row{
-
+    width:500px;
 }
 #row-title{
 
 }
 .display_output{
-    width:100%;
-    height:30%;
-    clear:both;
-    overflow-y:auto;
-    background-color:#e0e0e0;
-    border-radius:10px;
-}
-.output{
     
 }
-.themes{
+.output{
     float:left;
-    width:38%;
+    margin:1%;
+    background-color:#efefef;
+}
+.themes{
+    width:34%;
 }
 .key{
-    float:right;
-    width:58%;
+    width:62%;
+    margin-right:0%;
 }
 .selected{
     background-color:#c0c0c0;
@@ -70,48 +74,3 @@ td{
 .hovered{
     background-color:#e0e0e0;
 }
-/*.box{
-    background-color:lightblue;
-}
-.box:hover{
-    background-color:aquamarine;
-}
-.box1:active{
-    background-color:greenyellow;
-}
-.box2:active{
-    background-color:greenyellow;
-}
-.box3:active{
-    background-color:greenyellow;
-}
-.box1-content{
-    display:none;
-    position:absolute;
-    width:250px;
-    background-color:lightgreen;
-    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-.box1:hover .box1-content{
-    display:block;
-}
-.box2-content{
-    display:none;
-    position:absolute;
-    width:250px;
-    background-color:lightcoral;
-    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-.box2:hover .box2-content{
-    display:block;
-}
-.box3-content{
-    display:none;
-    position:absolute;
-    width:250px;
-    background-color:lightblue;
-    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-.box3:hover .box3-content{
-    display:block;
-}*/

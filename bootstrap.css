@@ -70,8 +70,8 @@ section .row img {
 }
 
 .btn.btn-primary:hover {
-  color: gold;
-  background-color:lightgreen;
+  border:2px solid gold;
+  border-radius: 2px;
 }
 
 .btn-secondary {
@@ -122,7 +122,8 @@ table,th,td{
     color:#ffffff;
 }
 .hovered{
-    background-color:lightgreen;
+    background-color:green;
+    color:#ffffff;
 }
 .panel{
     background-color:green;

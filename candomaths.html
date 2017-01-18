@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CanDoMaths Arithmetic Paper</title>
+        <meta name="description" content="An interactive maths page.">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <style>
+            *{
+                font-family:'Kalam', cursive;
+            }
+            body{
+                width:960px;
+                margin:0 auto;
+            }
+            #term1{
+                color:#FFC338;
+            }
+            #term2{
+                color:#50AC5F;
+            }
+            #answer{
+                color:#43ADD7;
+            }
+            #next{
+                color:#FFC338;
+            }
+            #reveal{
+                color: #50AC5F;
+            }
+            #hide{
+                color: #43ADD7;
+            }
+            select{
+                font-size: 16px;
+                border-radius: 8px;
+            }
+            p{
+                font-size: 32px;
+            }
+            button{
+                font-size: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1>Questions</h1>
+        <h2>Pick Question</h2>
+        <select size="5">
+            <option value="1">Question 1</option>
+            <option value="2">Question 2</option>
+            <option value="3">Question 3</option>
+            <option value="4">Question 4</option>
+            <option value="5">Question 5</option>
+            <option value="6">Question 6</option>
+            <option value="7">Question 7</option>
+            <option value="8">Question 8</option>
+            <option value="9">Question 9</option>
+        </select>
+        <p id="question"><span id="term1"></span> + <span id="term2"></span> = <span id="answer"></span></p>
+        <br>
+        <button id="next">Next Question</button>
+        <br>
+        <br>
+        <button id="reveal">Show Answer</button>
+        <br>
+        <br>
+        <button id ="hide">Hide Answer</button>
+        <script>
+            var t1,t2,a;
+            $(document).ready(function(){
+                next();
+                $('#next').on('click',next);
+                $('#reveal').on('click',reveal);
+                $('#hide').on('click',hide);
+                $('select').change(next);
+                function next(){
+                    $('#answer').text('');
+                    t1 = parseInt(Math.random()*100);
+                    t2 = parseInt(Math.random()*1000);
+                    a = t1+t2;
+                    $('#term1').text(t1);
+                    $('#term2').text(t2);
+                    $('#question').fadeIn(500);
+                }
+                function reveal(){
+                    $('#answer').text(a);
+                    $('#answer').fadeIn(500);
+                }
+                function hide(){
+                    $('#answer').fadeOut(500);
+                }
+            });
+        </script>
+        
+    </body>
+</html>

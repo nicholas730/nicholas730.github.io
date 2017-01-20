@@ -38,7 +38,7 @@
                 border-radius: 8px;
             }
             p{
-                font-size: 32px;
+                font-size: 64px;
             }
             button{
                 font-size: 16px;
@@ -60,7 +60,7 @@
             <option value="8">Question 8</option>
             <option value="9">Question 9</option>
         </select>
-        <p id="question"><span id="term1"></span> + <span id="term2"></span> = <span id="answer"></span></p>
+        <p id="question"><span id="term1"></span> <span id="operator">+</span> <span id="term2"></span> = <span id="answer"></span></p>
         <br>
         <button id="next">Next Question</button>
         <br>
@@ -71,17 +71,51 @@
         <button id ="hide">Hide Answer</button>
         <script>
             var t1,t2,a;
+            var choice =1;
             $(document).ready(function(){
                 next();
                 $('#next').on('click',next);
                 $('#reveal').on('click',reveal);
                 $('#hide').on('click',hide);
-                $('select').change(next);
+                $('select').change(function(){
+                    choice=parseInt($('select option:selected').val());
+                    next();
+                });
                 function next(){
                     $('#answer').text('');
-                    t1 = parseInt(Math.random()*100);
-                    t2 = parseInt(Math.random()*1000);
-                    a = t1+t2;
+                    switch(choice){
+                        case 1:
+                            t1 = parseInt(Math.random()*600)+100;
+                            t2 = (parseInt(Math.random()*3)+1)*100;
+                            a = t1+t2;
+                            $('#operator').text('+');
+                            break;
+                        case 2:
+                            t1=parseInt(Math.random()*90)+10;
+                            t2=(parseInt(Math.random()*7)+1)*100;
+                            t2+=(parseInt(Math.random()*3)+2)*10;
+                            t2+=10-(t1%10);
+                            a = t1+t2;
+                            $('#operator').text('+');
+                            break;
+                        case 3:
+                            t1 = parseInt(Math.random()*900)+100;
+                            t2=1;
+                            a = t1/t2;
+                            $('#operator').text('\u00F7');
+                            break;
+                        case 4:
+                            t1=parseInt(Math.random()*900)+100;
+                            t2=9;
+                            a=t1-t2;
+                            $('#operator').text('-');
+                            break;
+                        default:
+                            t1 = parseInt(Math.random()*700);
+                            t2 = (parseInt(Math.random()*3)+1)*100;
+                            a = t1+t2;
+                            
+                    }
                     $('#term1').text(t1);
                     $('#term2').text(t2);
                     $('#question').fadeIn(500);

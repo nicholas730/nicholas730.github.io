@@ -128,5 +128,21 @@ table,th,td{
 .panel{
     background-color:green;
     color:#ffffff;
-    margin-top:24px;
+    margin-top:12px;
 }
+.external , .dropbox{
+    display: flex;
+    align-items: center;
+    background-color:blue;
+    color:#ffffff;
+    margin: 24px 0 12px 0;
+    //height: 50px;
+    text-shadow: 0.25px 0.25px 0.25px #000000;
+    border-radius: 5px;
+}
+/*.external a{
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:300;
+    text-align:justify
+}*/

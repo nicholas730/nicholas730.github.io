@@ -70,6 +70,9 @@
                 display: block;
                 font: inherit;
             }
+            a{
+                text-decoration: none;
+            }
         </style>
     </head>
     <body>
@@ -125,7 +128,7 @@
         <button id ="hide">Hide Answer</button>
         <br>
         <br>
-        <button id ="print">Print Page</button>
+        <button id ="print"><a href="candomathsprint.html">Whole Paper</a></button>
     
         <script>
             var t1,t2,t3,a;
@@ -135,7 +138,7 @@
                 $('#next').on('click',next);
                 $('#reveal').on('click',reveal);
                 $('#hide').on('click',hide);
-                $('#print').on('click',printPage);
+//                $('#print').on('click',printPage);
                 $('select').change(function(){
                     choice=parseInt($('select option:selected').val());
                     next();
@@ -453,7 +456,7 @@
                     $('#answer').fadeOut(500);
                 }
                 function printPage(){
-                    window.print();
+                    //
                 }
             });
         </script>

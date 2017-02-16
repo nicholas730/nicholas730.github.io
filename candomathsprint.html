@@ -74,7 +74,8 @@
     </head>
     <body>
         
-        <h1>Questions</h1>
+        <h1>Question Paper</h1>
+<!--
         <h2>Pick Question</h2>
         <select size="1">
             <option value="1">Question 1</option>
@@ -114,24 +115,31 @@
             <option value="35">Question 35</option>
             <option value="36">Question 36</option>
         </select>
+-->
+<!--
         <p id="question"></p>
         <br>
-        <button id="next">Next Question</button>
+        <button id="next">Regenerate</button>
         <br>
         <br>
+-->
+<!--
         <button id="reveal">Show Answer</button>
         <br>
         <br>
         <button id ="hide">Hide Answer</button>
         <br>
         <br>
-        <button id ="print">Print Page</button>
+-->
+        <button id ="print">Print without answers</button>
+        <button id ="printa">Print with answers</button>
         <div id="paper"></div>
     
         <script>
             var t1,t2,t3,a;
             var choice =1;
             $(document).ready(function(){
+                var ansBox = '<img src="answerbox.png">';
                 next();
                 $('#next').on('click',next);
                 $('#reveal').on('click',reveal);
@@ -149,30 +157,28 @@
                             t1 = parseInt(Math.random()*600)+100;
                             t2 = (parseInt(Math.random()*4)+1)*100;
                             a = t1+t2;
-                            $('#paper').append('<p>'+t1+' + '+t2+' = '+a+ '</p>');
+                            $('#paper').append('<p>'+t1+' + '+t2+' = '+ansBox+'</p>');
                         case 2:
                             t1=parseInt(Math.random()*90)+10;
                             t2=(parseInt(Math.random()*8)+1)*100;
                             t2+=(parseInt(Math.random()*4)+2)*10;
                             t2+=10-(t1%10);
                             a = t1+t2;
-                            $('#paper').append('<p>'+t1+' + '+t2+' = '+a+ '</p>');
-                            break;
+                            $('#paper').append('<p>'+t1+' + '+t2+' = '+ansBox+'</p>');
                         case 3:
                             t1 = (parseInt(Math.random()*9)+1)*100;
                             t1+= (parseInt(Math.random()*9)+1)*10;
                             t1+= parseInt(Math.random()*9)+1;
                             t2=1;
                             a = t1/t2;
-                            $('#question').html(t1+' \u00F7 '+t2+' = <span id="answer"></span>');
-                            break;
+                            $('#paper').append('<p>'+t1+' \u00F7 '+t2+' = '+ansBox+'</p>');
                         case 4:
                             t1 = (parseInt(Math.random()*9)+1)*100;
                             t1+= (parseInt(Math.random()*9)+1)*10;
                             t1+= parseInt(Math.random()*9)+1;
                             t2=9;
                             a=t1-t2;
-                            $('#question').html(t1+' - '+t2+' = <span id="answer"></span>');
+                            $('#paper').append('<p>'+t1+' - '+t2+' = '+ansBox+'</p>');
                             break;
                         case 5:
                             t1 = (parseInt(Math.random()*9)+1)*100;
@@ -445,6 +451,7 @@
                             
                     }
                     //$('#question').fadeIn(500);
+                    
                 }
                 function reveal(){
                     $('#answer').html(a);

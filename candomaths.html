@@ -128,16 +128,18 @@
         <button id ="hide">Hide Answer</button>
         <br>
         <br>
-        <button id ="print"><a href="candomathsprint.html">Whole Paper</a></button>
+        <button id ="print"><a id="paper" target="_blank">Whole Paper</a></button>
     
         <script>
             var t1,t2,t3,a;
             var choice =1;
             $(document).ready(function(){
                 next();
+                dlPaper;
                 $('#next').on('click',next);
                 $('#reveal').on('click',reveal);
                 $('#hide').on('click',hide);
+                $('#print').on('click',dlPaper);
 //                $('#print').on('click',printPage);
                 $('select').change(function(){
                     choice=parseInt($('select option:selected').val());
@@ -306,7 +308,7 @@
                         case 19:
                             t1 = parseInt(Math.random()*6)+4;
                             t2 = 10;
-                            t2+= parseInt(Math.random()*6)
+                            t2+= parseInt(Math.random()*6);
                             a = t1*t1+t2;
                             $('#question').html(t1+'\u00B2 + '+t2+' = <span id="answer"></span>');
                             break;
@@ -412,7 +414,7 @@
                         case 33:
                             t1 = parseInt(Math.random()*5)+1;
                             t2 = t1+parseInt(Math.random()*5)+1;
-                            t3 = parseInt(Math.random()*4)+1;
+//                          t3 = parseInt(Math.random()*4)+1;
                             a = ' <span class="frac"><sup>'+1+'</sup><span>/</span><sub>'+t2+'</sub></span>';
                             $('#question').html('<span class="frac"><sup>'+t1+'</sup><span>/</span><sub>'+t2+'</sub></span> \u00F7 '+t1+' = <span id="answer"></span>');
                             break;
@@ -457,6 +459,10 @@
                 }
                 function printPage(){
                     //
+                }
+                function dlPaper(){
+                    var rand = parseInt(Math.random()*9)+1;
+                    $('#paper').attr("href","test"+rand+".pdf");
                 }
             });
         </script>

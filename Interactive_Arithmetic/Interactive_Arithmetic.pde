@@ -1,7 +1,7 @@
 import processing.pdf.*;
 int page = 0;
 PFont sans;
-PImage qbox;
+PImage qbox,logo,cover;
 String[] answers;
 
 
@@ -9,7 +9,9 @@ void setup() {
   answers = new String[36];
   sans = createFont("SansSerif.plain-48.vlw", 12);
   qbox = loadImage("qbox.png");
-  size(600, 850, PDF, "test9.pdf");
+  logo = loadImage("logo.png");
+  cover = loadImage("cover.png");
+  size(600, 850, PDF, "test.pdf");
   //size(600,850);
   background(255);
   textAlign(CENTER, CENTER);
@@ -22,6 +24,8 @@ void setup() {
 
 void draw() {
   PGraphicsPDF pdf = (PGraphicsPDF) g;
+  image(cover,50,50,width-100,height-100);
+  pdf.nextPage();
   for (int i=0; i<13; i++) {
     //pdf.nextPage();
     page++;
@@ -283,7 +287,7 @@ void renderPage() {
     
   case 10:
     t2 = parseInt(random(1)*13)+17;
-    t3 = parseInt(random(1)*245)+101;
+    t3 = parseInt(random(1)*27)+7;
     t1 = t2*t3;
     answers[27]=String.format("%d",t1/t2);
     text(String.format("%d \u00F7 %d =", t1, t2), 115, 75);
@@ -397,6 +401,8 @@ void renderPage() {
 
   textSize(12);
   text(String.format("Page %d", page), 20, height-20);
+  text("www.CanDoMaths.org",width/2-50,height-20);
+  image(logo,width-75,height-70,60,60);
 }
 
 //void mouseClicked() {

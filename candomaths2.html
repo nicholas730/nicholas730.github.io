@@ -34,26 +34,6 @@
             h2{
                 font-size: 40px;
             }
-/*
-            h1,h2{
-                color:#FFC338;
-            }
-            #question{
-                color:#50AC5F;
-            }
-            #answer{
-                color:#43ADD7;
-            }
-            #next{
-                color:#FFC338;
-            }
-            #reveal{
-                color: #50AC5F;
-            }
-            #hide{
-                color: #43ADD7;
-*/
-            }
             select{
                 font-size: 24px;
                 border-radius: 8px;
@@ -117,12 +97,6 @@
 	           font-size: 24px;
                 font-family: 'Chewy', cursive;
             }
-/*
-            td{
-                width: 30%;
-                align-content: center;
-            }
-*/
         </style>
     </head>
     <body>
@@ -190,23 +164,6 @@
                 </td>
             </tr>
         </table>
-<!--
-        <div>
-            <img width="100px" src="https://candomaths.org/images/CanDoLogoTransparent.png">
-        </div>
-        <div>
-            <h1>CanDoMaths</h1>
-            <h2>Interactive Arithmetic</h2>
-        </div>
-        <div width=30%>
-            <img  width="100px"src="https://candomaths.org/images/colin_thumbs.png">
-        </div>
--->
-        <br>
-        <br>
-        <div class="content">
-            
-        </div>
         <script>
             var t1,t2,t3,a;
             var choice =1;
@@ -538,8 +495,8 @@
                     //
                 }
                 function dlPaper(){
-                    var rand = parseInt(Math.random()*20)+1;
-                    $('#paper').attr("href","test"+rand+".pdf");
+                    var rand = parseInt(Math.random()*50)+1;
+                    $('#paper').attr("href","papers/test"+rand+".pdf");
                 }
             });
         </script>

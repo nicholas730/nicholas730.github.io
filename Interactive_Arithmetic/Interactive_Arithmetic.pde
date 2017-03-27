@@ -11,7 +11,7 @@ void setup() {
   qbox = loadImage("qbox.png");
   logo = loadImage("logo.png");
   cover = loadImage("cover.png");
-  size(600, 850, PDF, "test.pdf");
+  size(600, 850, PDF, "test20.pdf");
   //size(600,850);
   background(255);
   textAlign(CENTER, CENTER);

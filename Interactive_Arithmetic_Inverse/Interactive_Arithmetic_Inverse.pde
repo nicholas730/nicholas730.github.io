@@ -131,18 +131,18 @@ void renderPage() {
     t1+= parseInt(random(1)*9)+1;
     t2 = parseInt(random(1)*5)+2;
     //questions[0]=String.format("%s \u00D7 %s =", nfc(t1), nfc(t2));
-    answers[9]=String.format("%d",t1/t2);
+    answers[9]=String.format("%.3f",(float)t1/t2);
     text(String.format("%s \u00F7 %s =", nfc(t1), nfc(t2)), 115, 75);
     t1 = (parseInt(random(1)*5)+3)*10;
     t1+= parseInt(random(1)*9)+1;
     t2 = parseInt(random(1)*4)+6;
     //questions[1]=String.format("%d \u00D7 %d =", t1, t2);
-    answers[10]=String.format("%d",t1/t2);
+    answers[10]=String.format("%.3f",(float)t1/t2);
     text(String.format("%d \u00F7 %d =", t1, t2), 115, 250+75);
     t1 = (parseInt(random(1)*7)+3)*10;
     t2 = (parseInt(random(1)*8)+2)*10;
     //questions[2]=String.format("%d \u00D7 %d =", t1, t2);
-    answers[11]=String.format("%d",t1/t2);
+    answers[11]=String.format("%.3f",(float)t1/t2);
     text(String.format("%d \u00F7 %d =", t1, t2), 115, 500+75);
     break;
     
@@ -152,8 +152,8 @@ void renderPage() {
     t2+= (parseInt(random(1)*9)+1)*10;
     t2+= parseInt(random(1)*9)+1;
     //questions[0]=String.format("%s \u00D7 %s =", t1, t2);
-    answers[12]=String.format("%d",t2/t1);
-    text(String.format("%s \u00F7 %s =", t1, t2), 115, 75);
+    answers[12]=String.format("%.3f",(float)t2/t1);
+    text(String.format("%s \u00F7 %s =", t2, t1), 115, 75);
     t1 = (parseInt(random(1)*4)+1)*1000;
     t1+= parseInt(random(1)*5)+2;
     t2 = (parseInt(random(1)*3)+4)*100;
@@ -267,7 +267,7 @@ void renderPage() {
     t1+= parseInt(random(1)*9)+1;
     t2 = (parseInt(random(1)*8)+2)*10;
     t2+=5;
-    answers[25]=String.format("%d",(t1*t2)/10);
+    answers[25]=String.format("%.1f",(float)(t1*t2)/10);
     text(String.format("%d \u00D7 %.1f =", t1, (float)t2/10), 115, 250+75);
     t1 = parseInt(random(1)*6)+1;
     t2 = parseInt(random(1)*6)+7;
@@ -303,7 +303,7 @@ void renderPage() {
     t1+= parseInt(random(1)*9)+1;
     t2 = (parseInt(random(1)*4)+2)*10;
     t2+= parseInt(random(1)*9)+1;
-    answers[29]=String.format("%d",t1/t2);
+    answers[29]=String.format("%.3f",(float)t1/t2);
     text(String.format("%d \u00F7 %d =", t1, t2), 115, 500+75);
     break;
     

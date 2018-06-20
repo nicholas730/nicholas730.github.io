@@ -160,7 +160,7 @@ $(document).ready(function () {
     $(".1_9").click(function () {
         $("#statements").html("recognise and know the value of different denominations of coins and notes");
         $("#themes").html("Explore money");
-        $("#key").html("Recognise the coins: 1p, 2p, 5p, 10p, 20p, 50p, £1 and £2</br>Read and say amounts of money using the coins 1p, 2p, 5p, 10p, 20p, 50p</br>Recognise the coins: £1 and £2</br>Read and say amounts of money using the coins £1 and £2</br>Count, say and record amounts of money using the coins 1p, 2p, 5p, 10p, 20p, 50p, £1 and £2</br>Recognise the notes: £5 and £10</br>Read and say amounts of money using the notes £5 and £10</br>Solve simple problems involving money");
+        $("#key").html("Recognise the 1p coin</br>Recognise the 2p coin</br>Recognise the 1p and 2p coins</br>Recognise the 5p coin</br>Recognise the 10p coin</br>Recognise the 5p and 10p coins</br>Recognise the 20p coin</br>Recognise the 5p,10p and 20p coins</br>Recognise the 50p coin</br>Recognise the 5p,10p, 20p and 50p coins</br>Recognise the £1 coin</br>Recognise the £2 coin</br>Recognise the £1and £2 coins</br>Recognise the £5 note</br>Recognise the £10 note</br>Recognise the £20 note</br>Solve simple problems involving coins and notes");
         var $contents = $(this).text();
         $(".external").children("h3").text($contents + "  -   Fluency, Reasoning and Solving Problems Exemplification (.pdf)");
         $(".download").attr("href", "https://www.dropbox.com/sh/taeg5o4vlpwggui/AAB2JkSy1U2Dml8dHfQoeQN_a/Stage%201/St1_U9_Money_WR.pdf?dl=0");
